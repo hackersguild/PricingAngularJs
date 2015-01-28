@@ -8,7 +8,16 @@ Pricing.controller('PricingController', function ($scope){
 	];
 
 	$scope.toggle = function (entry){
-		entry.active = !entry.active
-		console.log(entry.active);
+		entry.active = !entry.active;
+	}
+
+	$scope.total = function(){
+		var result = 0;
+		angular.forEach($scope.prices, function(price){
+			if (price.active) {
+				 result += price.amount;
+			}
+		});
+		console.log(result);
 	}
 });	
