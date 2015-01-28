@@ -19,5 +19,6 @@ Pricing.controller('PricingController', function ($scope){
 			}
 		});
 		console.log(result);
+		return result;
 	}
 });	
